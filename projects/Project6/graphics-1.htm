@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extreme Honeymoons</title>
+
+<style
+type="text/css">
+#thumbs, #image
+{
+width: 700px; border: solid 1px
+#000; text-align: center; margin:
+0 auto 0 auto; color: #000;
+background: #eee; padding:
+5px;
+}
+#thumbs {
+margin-top: 10px;
+}
+#thumbs img {
+border: solid 1px
+#000; margin:
+5px;
+}
+#image{
+height:400px;
+}
+.instructions{
+font-style:italic;
+}
+</style>
+
+
+<script language="JavaScript" type="text/javascript">
+
+	PrintButton1 = new Image
+	PrintButton2 = new Image
+	logo1 = new Image
+	logo2 = new Image
+if (document.images) {
+	PrintButton1.src = "images/print5.gif"
+	PrintButton2.src = "images/print6.gif"
+	logo1.src = "images/logo1.jpg"
+	logo2.src = "images/logo2.jpg"
+}
+
+
+		var imgArray = new Array(
+			'Image1Lg.png',
+			'Image2Lg.png',
+			'Image3Lg.png',
+			'Image4Lg.png'
+			
+
+		);
+
+
+		var titleArray = new Array(
+			'Couple biking in mountains',
+			'Couple biking in sunset',
+			'Couple hiking by lake',
+			'Couple camping in forest'
+			
+		);
+			
+		var imgPath = "Images/Fullsize/";
+		
+		function swapImage(imgID) {
+
+			var theImage = document.getElementById('theImage');
+			var textDiv = document.getElementById('bottomText');
+
+			var newImg;
+			var textTitle;
+
+			newImg = imgArray[imgID];
+			theImage.src = imgPath + newImg;
+
+			textTitle=titleArray[imgID];
+
+      			textDiv.innerHTML = textTitle;
+		}
+			
+		function preloadImages() {		
+			for(var i = 0; i < imgArray.length; i++) {
+				var tmpImg = new Image;
+				tmpImg.src = imgPath + imgArray[i];
+			}
+		}
+		
+
+</script>
+
+
+</head>
+<body  onload="preloadImages()">
+
+<div align="center">
+
+
+<div>
+<a href="" onmouseover="document.getElementById('print').src='Images/print2.jpg';"
+onmouseout="document.getElementById('print').src='Images/print1.jpg';">
+<img src="Images/Print1.jpg" alt="Print Page" width="200" height="50"
+id="print"></a>
+</div>
+
+
+<div>
+<a href=""
+onmouseover="document.getElementById('logo').src='Images/EH-Logo2.png';"
+onmouseout="document.getElementById('logo').src='Images/EH-Logo.png';">
+<img src="Images/EH-Logo.png" alt="Logo" id="logo"></a>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+
+<div id="thumbs">
+		<img src="Images/Thumbnails/Image1Sm.png" alt="Couple biking in mountains" onmouseover="swapImage(0);" />
+		<img src="Images/Thumbnails/Image2Sm.png" alt="Couple biking in sunset" onmouseover="swapImage(1);" />
+		<img src="Images/Thumbnails/Image3Sm.png" alt="Couple hiking by lake" onmouseover="swapImage(2);" />
+		<img src="Images/Thumbnails/Image4Sm.png" alt="Couple camping in forest" onmouseover="swapImage(3);" />
+		
+</div>
+
+	<div id="image">
+
+		<img id="theImage" src="Images/FullSize/Image1Lg.png" alt="Couple biking" />
+		<h3 id="bottomText">Couple biking in mountains</h3>
+	</div>
+
+<img src="Images/2collback.png" alt="Background Image" />
+
+<br />
+<br />
+<br />
+<br />
+
+
+
+</div>
+
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+</p>
+  
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* CSS Document */
+
+@font-face {
+    font-family: 'Aescrawl';
+    src: url('aescrawl.ttf') format('truetype');
+}
+
+body {
+    background-color: #FFE0AA;
+    font-family: Arial, sans-serif;
+    color: #051A38;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+header {
+    width: 900px;
+    height: 310px;
+    background-color: #758AA8;
+    position: relative;
+    overflow: visible;
+}
+
+header img#logo, 
+header img#banner {
+    float: left;
+}
+
+header img#logo {
+    margin: 10px;
+}
+
+nav {
+    width: 30%;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: #F4F7FB;
+    color: #051A38;
+    border: 1px solid #758AA8;
+    font-size: 1.1em;
+}
+
+section {
+    width: 900px;
+    background-image: url("Images/backimage.png");
+    background-repeat: repeat-y;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+article {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer {
+    width: 900px;
+    background-color: #758AA8;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+}
+
+/* ... (Remaining table/h1/h2 styles from mystyles.css would be here) ... */
+
+/* --- PRINT FRIENDLY OVERRIDES START --- */
+
+/* 1. White background, black text, and Serif font for the body */
+body {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* 2. Set container and structural elements to 100% width */
+#container, header, section {
+    width: 100% !important;
+    background-color: white !important;
+    background-image: none !important;
+    height: auto !important; /* Allow header height to shrink if needed */
+}
+
+/* 3. Hide Navigation and Footer */
+nav, footer {
+    display: none !important;
+}
+
+/* 4. Set Article to 95% and remove floating columns */
+article {
+    width: 95% !important;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+/* 5. Clean up Header elements for print */
+header img#logo, 
+header img#banner {
+    float: none !important; /* Remove floats to prevent clipping */
+    display: block;
+    margin: 0 auto;
+}
+
+/* 6. Table adjustments for print legibility */
+table td, table th {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #333 !important;
+}
+
+caption {
+    background-color: transparent !important;
+    color: black !important;
+    border: none !important;
+}
